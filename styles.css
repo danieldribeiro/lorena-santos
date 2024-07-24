@@ -243,7 +243,7 @@ body{
   z-index: -1;
 }
 
-.question img{
+.circle{
   width: 100px;
   filter: drop-shadow(0 0px 5px black);
   animation: rotate 10s linear infinite;
@@ -267,4 +267,35 @@ body{
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.digital-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 0;
+  position: relative;
+}
+
+#waves{
+  position: absolute;
+  z-index: -1;
+  width: 60%;
+  top: -15%;
+  right: 0;
+}
+
+.digital-section h2{
+  margin-bottom: 50px;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.digital-section .btn-cta{
+  margin-top: 50px;
 }
