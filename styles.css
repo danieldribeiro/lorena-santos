@@ -16,9 +16,9 @@ body{
 .hero-section{
   width: 100%;
   height: 90%;
-  background-image: url('./assets/lorena-santos-hero2.svg');
-  background-position: bottom 30% right 0;
-  background-size: 95%;
+  background-image: url('./assets/lorena-santos-hero2.webp');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   padding: 0 12%;
@@ -298,4 +298,151 @@ body{
 
 .digital-section .btn-cta{
   margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section{
+    flex-direction: column;
+    background-size: contain;
+    background-position: top;
+    height: auto;
+    padding: 0 8% 10%;
+  }
+
+  .container{
+    justify-content: flex-end;
+    gap: 35px;
+    padding-top: 35vh;
+  }
+
+  .container h1{
+    font-size: 4rem;
+  }
+
+  .container h3{
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .container p{
+    font-size: 2.8rem;
+    line-height: 2.5rem;
+  }
+
+  .btn-cta{
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .section{
+    gap: 30px;
+    padding: 15% 10% 10%;
+  }
+
+  .section:not(:first-child){
+    height: auto;
+  }
+  
+  #lines{
+    display: none;
+  }
+  
+  .section h2{
+    font-size: 4rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+  
+  .pilar-wrapper{
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .pilar{
+    width: 270px;
+  }
+  
+  .pilar p{
+    font-size: 2.5rem;
+  }
+
+  #curves{
+    display: none;
+  }
+  
+  .potential-section h2{
+    width: 100%;
+    line-height: 4rem;
+  }
+  
+  .potential-section p{
+    width: 100%;
+    line-height: 2.5rem;
+  }
+  
+  .questions-wrapper{
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .question{
+    padding: 20px;
+  }
+
+  .question:nth-child(1):before{
+    display: none;
+  }
+  
+  .question:not(:nth-child(1)):before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: #4F1941;
+  }
+  
+  .circle{
+    width: 120px;
+  }
+  
+  .question p{
+    font-size: 2.5rem;
+  }
+  
+  .cta-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cta-wrapper .btn-cta{
+    font-size: 2rem;
+    padding: 15px 10px;
+  }
+  
+  .digital-section{
+    gap: 15px;
+  }
+  
+  #waves{
+    display: none;
+  }
+  
+  .digital-section h2{
+    margin-bottom: 30px;
+  }
+  
+  .item{
+    flex-direction: column;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .digital-section .btn-cta{
+    margin-top: 30px;
+  }
 }
