@@ -127,6 +127,7 @@ body{
   justify-content: center;
   align-items: center;
   gap: 20px;
+  color: #fff;
 }
 
 .pilar h4{
@@ -137,7 +138,7 @@ body{
 
 .pilar h4 i{
   position: absolute;
-  color: #fff;
+  color: #000000;
   font-size: 4rem;
   top: -4px;
   left: -26px;
@@ -485,5 +486,47 @@ body{
 
   .digital-section .btn-cta{
     margin-top: 30px;
+  }
+
+  .growth-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .growth-section > div{
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .growth-section > div:nth-child(odd){
+    animation: slideLeft 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+  }
+
+  .growth-section > div:nth-child(even){
+    animation: slideRight 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+  }
+
+  .growth-section > div i{
+    font-size: 5rem;
+    color: #D91149;
+  }
+
+  .growth-section > div h3{
+    font-size: 3rem;
+  }
+
+  .growth-section > div p{
+    font-size: 2rem;
+  }
+
+  .lorena-santos p,
+  .lorena-santos strong{
+    font-size: 2rem;
+    letter-spacing: .7px;
+    text-align: justify;
   }
 }
