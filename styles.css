@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,7 +6,7 @@
   font-family: "Zain", sans-serif;
 }
 
-body{
+body {
   width: 100dvw;
   height: 100dvh;
   background-color: #fbfbfb;
@@ -14,113 +14,108 @@ body{
   user-select: none;
 }
 
-.hero-section{
+.hero-section {
   width: 100%;
   height: 90%;
-  background-image: url('./assets/lorena-santos-hero2.webp');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  padding: 0 12%;
-}
-
-.container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 70px;
-  max-width: 550px;
+  background-image: url("./assets/lorena-santos-hero2.webp");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 0 8% 10%;
 }
 
-.container h1 {
-  font-size: 4rem;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 35px;
+  padding-top: 30vh;
 }
 
-.container h3{
-  font-size: 6rem;
-  line-height: 5rem;
+.container #logo {
+  width: 45%;
+  margin: 0 auto;
 }
 
-.container p{
-  font-size: 3.5rem;
-  line-height: 2.8rem;
+.container h3 {
+  font-size: 5rem;
+  line-height: 4rem;
 }
 
-.btn-cta{
-  width: fit-content;
+.container p {
+  font-size: 2.8rem;
+  line-height: 2.5rem;
+}
+
+.btn-cta {
+  width: 100%;
+  font-size: 2rem;
   padding: 15px 25px;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
   font-weight: bolder;
   border-radius: 12px;
-  background: linear-gradient(-45deg, #4f1941de, #D91149, #4f1941ea, #D91149);
+  background: linear-gradient(-45deg, #4f1941de, #d91149, #4f1941ea, #d91149);
   background-size: 500%;
   animation: anime 20s linear infinite;
   transition: all 0.2s ease;
 }
 
-.btn-cta:hover{
-  box-shadow: 0 0 10px 2px #4f1941de;
-}
-
 @keyframes anime {
-  0%{
+  0% {
     background-position: 0 50%;
   }
-  50%{
+  50% {
     background-position: 100% 50%;
   }
-  100%{
+  100% {
     background-position: 100% 50%;
   }
 }
 
-.section{
+.section {
   width: 100%;
-  padding: 5% 12% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
+  padding: 15% 10% 10%;
 }
 
-.section:not(:first-child){
-  height: 100vh;
+.section:not(:first-child) {
+  height: auto;
 }
 
-.your-company-section{
-  position: relative;
+#lines {
+  display: none;
 }
 
-#lines{
-  position: absolute;
-  z-index: -1;
-  width: 50%;
-  top: -20%;
-  left: 0;
+.section h2 {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 3rem;
 }
 
-.section h2{
-  font-size: 6rem;
-}
-
-.pilar-wrapper{
+.pilar-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   gap: 50px;
 }
 
-.pilar{
-  width: 250px;
+.pilar {
+  width: 270px;
   height: 250px;
-  padding: 0 2%;
-  background: linear-gradient(-45deg, #4f1941de, #D91149);
+  padding: 0 4%;
+  background: linear-gradient(-45deg, #4f1941de, #d91149);
   background-color: #4f1941de;
   border-radius: 12px;
   display: flex;
@@ -129,15 +124,42 @@ body{
   align-items: center;
   gap: 20px;
   color: #fff;
+  animation: slideLeft 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
 }
 
-.pilar h4{
+.pilar:nth-child(2) {
+  animation: slideRight 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.pilar h4 {
   font-size: 4rem;
   position: relative;
   z-index: 10;
 }
 
-.pilar h4 i{
+.pilar h4 i {
   position: absolute;
   color: #000000;
   font-size: 4rem;
@@ -146,68 +168,56 @@ body{
   z-index: -1;
 }
 
-.pilar p{
-  font-size: 2rem;
+.pilar p {
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.potential-section{
+#curves {
+  display: none;
+}
+
+.potential-section {
   position: relative;
   padding-top: 0;
 }
 
-#curves{
-  position: absolute;
-  width: 50%;
-  z-index: -1;
-  top: -40%;
-  right: 0;
-}
-
-.potential-section h2{
-  width: 800px;
-  text-align: center;
+.potential-section h2 {
+  width: 100%;
   line-height: 4rem;
-}
-
-.potential-section p{
-  font-size: 2.5rem;
   text-align: center;
-  width: 550px;
 }
 
-.questions-wrapper{
+.potential-section p {
+  width: 100%;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.questions-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 120px;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.question{
+.question {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   position: relative;
   max-width: 387px;
-  padding: 43px 20px 20px;
+  padding: 20px;
   border-radius: 15px 15px 0 0;
   background-color: #fbfbfb;
 }
 
-.question:nth-child(1):before{
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: calc(50% - 1px);
-    width: 60%;
-    height: 115px;
-    border-top: 1px solid #4F1941;
-    border-left: 1px solid #4F1941;
-    border-radius: 30px 0 0 0;
-    pointer-events: none;
+.question:nth-child(1):before {
+  display: none;
 }
 
-.question:nth-child(2):before{
+.question:not(:nth-child(1)):before {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -215,24 +225,10 @@ body{
   transform: translateX(-50%);
   width: 1px;
   height: 60px;
-  background: #4F1941;
+  background: #4f1941;
 }
 
-.question:last-child:before{
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  right: calc(50% - 1px);
-  width: 60%;
-  height: 115px;
-  border-top: 1px solid #4F1941;
-  border-left: 1px solid #4F1941;
-  border-radius: 30px 0 0 0;
-  pointer-events: none;
-  transform: scaleX(-1);
-}
-
-.question::after{
+.question::after {
   content: "";
   position: absolute;
   top: -1px;
@@ -240,38 +236,43 @@ body{
   transform: translateX(-50%);
   width: calc(100% + 2px);
   height: 100%;
-  background: linear-gradient(180deg, #4F1941, #faf9fa00);
+  background: linear-gradient(180deg, #4f1941, #faf9fa00);
   border-radius: 15px 15px 0 0;
   z-index: -1;
 }
 
-.circle{
-  width: 100px;
+.circle {
+  width: 120px;
   filter: drop-shadow(0 0px 5px black);
   animation: rotate 10s linear infinite;
 }
 
-@keyframes rotate{
-  0%{
+@keyframes rotate {
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.question p{
-  font-size: 2.3rem;
+.question p {
+  font-size: 2.5rem;
 }
 
-.cta-wrapper{
+.cta-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.digital-section{
+.cta-wrapper .btn-cta {
+  font-size: 2rem;
+  padding: 15px 10px;
+}
+
+.digital-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,312 +281,382 @@ body{
   position: relative;
 }
 
-#waves{
-  position: absolute;
-  z-index: -1;
-  width: 60%;
-  top: -15%;
-  right: 0;
+#waves {
+  display: none;
 }
 
-.digital-section h2{
-  margin-bottom: 50px;
+.digital-section h2 {
+  margin-bottom: 30px;
 }
 
-.item{
+.item {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
   font-size: 2.5rem;
+  animation: slideUp 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
 }
 
-.digital-section .btn-cta{
-  margin-top: 50px;
+@keyframes slideUp {
+  from {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .hero-section{
-    flex-direction: column;
-    background-size: contain;
-    background-position: top;
-    height: auto;
-    padding: 0 8% 10%;
+.digital-section .btn-cta {
+  margin-top: 30px;
+}
+
+.growth-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.growth-section > div {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.growth-section > div:nth-child(odd) {
+  animation: slideLeft 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+}
+
+.growth-section > div:nth-child(even) {
+  animation: slideRight 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+}
+
+.growth-section > div i {
+  font-size: 5rem;
+  color: #d91149;
+}
+
+.growth-section > div h3 {
+  font-size: 3rem;
+}
+
+.growth-section > div p {
+  font-size: 2rem;
+}
+
+.lorena-santos p,
+.lorena-santos strong {
+  width: 95%;
+  font-size: 2rem;
+  text-align: justify;
+}
+
+#who-is-lorena-santos {
+  width: 150%;
+  transform: translateX(-50px) translateY(-20px);
+}
+
+.accordion-flush {
+  width: 100%;
+}
+
+.accordion-button[type="button"] {
+  font-size: 2rem;
+}
+
+.accordion-button[type="button"]:not(.collapsed) {
+  background-color: #d91149;
+  color: #fff;
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 2rem;
+}
+
+.faq h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4f1941;
+  color: #fff;
+}
+
+#logo-footer {
+  width: 20%;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
+
+footer i {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .hero-section {
+    width: 150%;
+    height: 125vh;
+    background-position: right;
+    background-size: cover;
+    padding: 0 8% 0%;
   }
 
-  .container{
-    justify-content: flex-end;
-    gap: 35px;
-    padding-top: 30vh;
-  }
-
-  .container #logo{
-    width: 45%;
-    margin: 0 auto;
-  }
-
-  .container h1{
-    font-size: 4rem;
-  }
-
-  .container h3{
-    font-size: 5rem;
-    line-height: 4rem;
-  }
-
-  .container p{
-    font-size: 2.8rem;
-    line-height: 2.5rem;
-  }
-
-  .btn-cta{
-    width: 100%;
-    font-size: 2rem;
-  }
-
-  .section{
-    gap: 30px;
-    padding: 15% 10% 10%;
-  }
-
-  .section:not(:first-child){
-    height: auto;
-  }
-  
-  #lines{
-    display: none;
-  }
-  
-  .section h2{
-    font-size: 4rem;
-    text-align: center;
-    line-height: 3rem;
-  }
-  
-  .pilar-wrapper{
-    flex-direction: column;
+  .container {
+    max-width: 30% !important;
     gap: 50px;
-  }
-  
-  .pilar{
-    width: 270px;
-    animation: slideLeft 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 0% cover 50%;
+    margin-left: 0 !important;
+    padding-top: 5vh;
   }
 
-  .pilar:nth-child(2){
-    animation: slideRight 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 0% cover 50%;
+  .container #logo {
+    width: 35%;
+    margin-left: -30px;
   }
 
-  @keyframes slideLeft {
-    from{
-      transform: translateX(150%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+  .container h3 {
+    font-size: 6rem;
+    line-height: 5rem;
   }
 
-  @keyframes slideRight {
-    from{
-      transform: translateX(-150%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+  .container p {
+    font-size: 3.5rem;
+    line-height: 2.8rem;
   }
-  
-  .pilar p{
+
+  .btn-cta {
+    width: fit-content;
+    padding: 15px 25px;
     font-size: 2.5rem;
+    text-transform: uppercase;
   }
 
-  #curves{
-    display: none;
-  }
-  
-  .potential-section h2{
-    width: 100%;
-    line-height: 4rem;
-  }
-  
-  .potential-section p{
-    width: 100%;
-    line-height: 2.5rem;
-  }
-  
-  .questions-wrapper{
-    flex-direction: column;
-    gap: 60px;
+  .btn-cta:hover {
+    box-shadow: 0 0 10px 2px #4f1941de;
   }
 
-  .question{
-    padding: 20px;
+  @keyframes anime {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
 
-  .question:nth-child(1):before{
-    display: none;
-  }
-  
-  .question:not(:nth-child(1)):before{
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1px;
-    height: 60px;
-    background: #4F1941;
-  }
-  
-  .circle{
-    width: 120px;
-  }
-  
-  .question p{
-    font-size: 2.5rem;
-  }
-  
-  .cta-wrapper{
+  .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 0;
   }
 
-  .cta-wrapper .btn-cta{
-    font-size: 2rem;
-    padding: 15px 10px;
+  .section:not(:first-child) {
+    height: auto;
   }
-  
-  .digital-section{
-    gap: 15px;
+
+  .your-company-section {
+    position: relative;
   }
-  
-  #waves{
+
+  #lines {
     display: none;
   }
-  
-  .digital-section h2{
-    margin-bottom: 30px;
-  }
-  
-  .item{
-    flex-direction: column;
-    text-align: center;
-    font-size: 2.5rem;
-    animation: slideUp 1s ease-in-out;
-    animation-timeline: view();
-    animation-range: cover 0% cover 50%;
+
+  .section h2 {
+    font-size: 6rem;
   }
 
-  @keyframes slideUp {
-    from{
-      transform: translateY(120%);
-      opacity: 0;
-    }
-    to{
-      transform: translateY(0%);
-      opacity: 1;
-    }
+  .pilar-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
   }
 
-  .digital-section .btn-cta{
-    margin-top: 30px;
-  }
-
-  .growth-section{
+  .pilar {
+    width: 300px;
+    height: 300px;
+    padding: 0 2%;
+    background: linear-gradient(-45deg, #4f1941de, #d91149);
+    background-color: #4f1941de;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-  }
-
-  .growth-section > div{
-    text-align: center;
-    margin: 20px 0;
-  }
-
-  .growth-section > div:nth-child(odd){
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
     animation: slideLeft 1s ease-in-out;
     animation-timeline: view();
     animation-range: cover 0% cover 50%;
   }
 
-  .growth-section > div:nth-child(even){
-    animation: slideRight 1s ease-in-out;
+  .pilar:nth-child(1) {
+    z-index: 10;
+  }
+
+  .pilar:nth-child(2) {
+    animation: slideLeft 1.5s ease-in-out;
     animation-timeline: view();
-    animation-range: cover 0% cover 50%;
+    animation-range: cover -15% cover 50%;
+    z-index: 1;
   }
 
-  .growth-section > div i{
+  .pilar:nth-child(3) {
+    animation-range: cover -40% cover 50%;
+    z-index: 0;
+  }
+
+  .pilar h4 {
     font-size: 5rem;
-    color: #D91149;
+    position: relative;
+    z-index: 10;
   }
 
-  .growth-section > div h3{
+  .pilar h4 i {
+    position: absolute;
+    color: #000000;
+    font-size: 4rem;
+    top: -4px;
+    left: -26px;
+    z-index: -1;
+  }
+
+  .pilar p {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  #curves {
+    display: none;
+  }
+
+  .potential-section h2 {
+    width: 800px;
+    text-align: center;
+    line-height: 4rem;
+  }
+
+  .potential-section p {
+    font-size: 3rem !important;
+    text-align: center;
+    width: 550px;
+  }
+
+  .questions-wrapper {
+    gap: 80px;
+  }
+
+  .question {
+    max-width: 580px;
+    padding: 43px 40px 20px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .circle {
+    width: 130px;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .question p {
+    font-size: 2.3rem;
+  }
+
+  .potential-section .btn-cta {
+    font-size: 2.5rem;
+    padding: 15px 20px;
+  }
+
+  .item {
+    font-size: 3rem;
+    max-width: 80%;
+  }
+
+  .digital-section .btn-cta {
+    margin-top: 50px;
+  }
+
+  .growth-section h2 {
+    line-height: 4.5rem !important;
+  }
+
+  .growth-section > div i {
+    font-size: 6rem;
+  }
+
+  .growth-section > div h3 {
+    font-size: 4rem;
+  }
+
+  .growth-section > div p {
     font-size: 3rem;
   }
 
-  .growth-section > div p{
-    font-size: 2rem;
-  }
-
   .lorena-santos p,
-  .lorena-santos strong{
-    width: 95%;
+  .lorena-santos strong {
+    font-size: 3rem;
+    background-color: transparent;
+  }
+
+  #who-is-lorena-santos {
+    transform: translateX(-15%) translateY(-80px);
+  }
+
+  .accordion-button[type="button"] {
+    font-size: 3.5rem;
+    padding: 30px 0;
+  }
+
+  .accordion-body {
+    font-size: 3rem;
+  }
+
+  .faq h3 {
+    font-size: 3rem;
+    width: 80%;
+  }
+
+  #logo-footer {
+    width: 10%;
+  }
+
+  footer p {
     font-size: 2rem;
-    text-align: justify;
   }
-
-  #who-is-lorena-santos{
-    width: 150%;
-    transform: translateX(-50px) translateY(-20px);
-  }
-
-  .accordion-flush{
-    width: 100%;
-  }
-
-  .accordion-button[type="button"]{
-    font-size: 2rem;
-  }
-
-  .accordion-button[type="button"]:not(.collapsed) {
-    background-color: #D91149;
-    color: #fff;
-    box-shadow: none;
-}
-
-  .accordion-body{
-    font-size: 2rem;
-  }
-
-  .faq h3{
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bolder;
-    margin-top: 20px;
-  }
-
-  footer{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #4F1941;
-    color: #fff;
-  }
-
-  #logo-footer{
-    width: 20%;
-  }
-
-  footer p{
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  footer i{
-    font-size: 2.5rem;
-    margin-right: 10px;
+  
+  footer i {
+    font-size: 3rem;
+    margin-right: 20px;
   }
 }
