@@ -12,6 +12,8 @@
           "width: fit-content"
         ]
       }
-    ]
+    ],
+    "disown-opener": "off",
+    "axe/name-role-value": "off"
   }
 }
