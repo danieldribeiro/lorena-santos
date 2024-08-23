@@ -46,6 +46,7 @@ body {
 
 .container #logo {
   width: 45%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -100,10 +101,6 @@ body {
 
 .section:not(:first-child) {
   height: auto;
-}
-
-#lines {
-  display: none;
 }
 
 .section h2 {
@@ -166,13 +163,13 @@ body {
   }
 }
 
-.pilar h4 {
+.pilar h3 {
   font-size: 4rem;
   position: relative;
   z-index: 10;
 }
 
-.pilar h4 i {
+.pilar h3 i {
   position: absolute;
   color: var(--text-color);
   font-size: 4rem;
@@ -184,10 +181,6 @@ body {
 .pilar p {
   font-size: 2.5rem;
   text-align: center;
-}
-
-#curves {
-  display: none;
 }
 
 .potential-section {
@@ -256,6 +249,7 @@ body {
 
 .circle {
   width: 120px;
+  height: 100%;
   filter: drop-shadow(0 0px 5px black);
   animation: rotate 10s linear infinite;
 }
@@ -292,10 +286,6 @@ body {
   gap: 15px;
   padding-top: 0;
   position: relative;
-}
-
-#waves {
-  display: none;
 }
 
 .digital-section h2 {
@@ -378,6 +368,7 @@ body {
 
 #who-is-lorena-santos {
   width: 150%;
+  height: 100%;
   transform: translateX(20px) translateY(-20px);
 }
 
@@ -417,6 +408,7 @@ footer {
 
 #logo-footer {
   width: 20%;
+  height: 100%;
 }
 
 footer p {
@@ -451,6 +443,7 @@ footer a i{
 
   .container #logo {
     width: 35%;
+    height: 100%;
     margin-left: -30px;
   }
 
@@ -504,10 +497,6 @@ footer a i{
     position: relative;
   }
 
-  #lines {
-    display: none;
-  }
-
   .section h2 {
     font-size: 6rem;
   }
@@ -554,13 +543,13 @@ footer a i{
     z-index: 0;
   }
 
-  .pilar h4 {
+  .pilar h3 {
     font-size: 5rem;
     position: relative;
     z-index: 10;
   }
 
-  .pilar h4 i {
+  .pilar h3 i {
     position: absolute;
     color: var(--text-color);
     font-size: 4rem;
@@ -572,10 +561,6 @@ footer a i{
   .pilar p {
     font-size: 2.4rem;
     text-align: center;
-  }
-
-  #curves {
-    display: none;
   }
 
   .potential-section h2 {
@@ -602,6 +587,7 @@ footer a i{
 
   .circle {
     width: 130px;
+    height: 100%;
   }
 
   @keyframes rotate {
@@ -655,6 +641,7 @@ footer a i{
 
   #who-is-lorena-santos {
     width: 110%;
+    height: 100%;
     transform: translateX(40px) translateY(-80px);
   }
 
@@ -674,6 +661,7 @@ footer a i{
 
   #logo-footer {
     width: 10%;
+    height: 100%;
   }
 
   footer p {
@@ -704,6 +692,7 @@ footer a i{
 
   .container #logo {
     width: 35%;
+    height: 100%;
     margin-left: -30px;
   }
 
@@ -757,10 +746,6 @@ footer a i{
     position: relative;
   }
 
-  #lines {
-    display: none;
-  }
-
   .section h2 {
     font-size: 6rem;
   }
@@ -807,13 +792,13 @@ footer a i{
     z-index: 0;
   }
 
-  .pilar h4 {
+  .pilar h3 {
     font-size: 5rem;
     position: relative;
     z-index: 10;
   }
 
-  .pilar h4 i {
+  .pilar h3 i {
     position: absolute;
     color: var(--text-color);
     font-size: 4rem;
@@ -825,10 +810,6 @@ footer a i{
   .pilar p {
     font-size: 2.4rem;
     text-align: center;
-  }
-
-  #curves {
-    display: none;
   }
 
   .potential-section h2 {
@@ -855,6 +836,7 @@ footer a i{
 
   .circle {
     width: 130px;
+    height: 100%;
   }
 
   @keyframes rotate {
@@ -931,6 +913,7 @@ footer a i{
   #who-is-lorena-santos {
     transform: translateX(0) translateY(-150px);
     width: 100%;
+    height: 100%;
   }
 
   .faq{
@@ -968,6 +951,7 @@ footer a i{
 
   #logo-footer {
     width: 8%;
+    height: 100%;
   }
 
   footer p {
